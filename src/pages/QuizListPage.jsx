@@ -5,7 +5,7 @@ const QuizListPage = () => {
   const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    fetch("https://quiz-server.onrender.com/quizzes")
+    fetch("https://quiz-management-system-react.onrender.com/quizzes")
       .then((res) => res.json())
       .then((data) => setQuizzes(data))
       .catch((err) => console.error("Error fetching quizzes:", err));
@@ -13,26 +13,29 @@ const QuizListPage = () => {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Available Quizzes</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">Available Quizzes</h1>
+
       {quizzes.length === 0 ? (
-        <p>No quizzes available. Please add one from Admin page.</p>
+        <p className="text-center text-gray-600">
+          No quizzes available. Please add one from Admin page.
+        </p>
       ) : (
-        <ul className="space-y-3">
+        <div className="grid md:grid-cols-2 gap-4">
           {quizzes.map((quiz) => (
-            <li
+            <div
               key={quiz.id}
-              className="border rounded p-3 flex justify-between items-center"
+              className="bg-white rounded-xl shadow p-5 flex flex-col justify-between"
             >
-              <span className="font-medium">{quiz.title}</span>
+              <h2 className="font-semibold text-lg mb-2">{quiz.title}</h2>
               <Link
                 to={`/quiz/${quiz.id}`}
-                className="bg-blue-600 text-white px-4 py-1 rounded"
+                className="bg-blue-600 text-white text-center rounded-md py-2 mt-3 hover:bg-blue-700"
               >
-                Start
+                Start Quiz
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );

@@ -34,7 +34,7 @@ const AdminPage = () => {
       questions,
     };
 
-    const res = await fetch("https://quiz-server.onrender.com/quizzes", {
+    const res = await fetch("https://quiz-management-system-react.onrender.com/quizzes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newQuiz),
