@@ -8,7 +8,7 @@ const QuizPage = () => {
   const [score, setScore] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/quizzes/${id}`)
+    fetch(`https://quiz-server.onrender.com/quizzes/${id}`)
       .then((res) => res.json())
       .then((data) => setQuiz(data))
       .catch((err) => console.error("Error fetching quiz:", err));
@@ -44,8 +44,7 @@ const QuizPage = () => {
       total: quiz.questions.length,
     });
 
-    // Optional: save submission to backend
-    fetch("http://localhost:5000/submissions", {
+    fetch("https://quiz-server.onrender.com/submissions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

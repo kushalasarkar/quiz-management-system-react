@@ -5,7 +5,7 @@ const QuizListPage = () => {
   const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/quizzes")
+    fetch("https://quiz-server.onrender.com/quizzes")
       .then((res) => res.json())
       .then((data) => setQuizzes(data))
       .catch((err) => console.error("Error fetching quizzes:", err));
