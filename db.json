@@ -1,4 +1,18 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "guest",
+      "password": "guest123",
+      "role": "public"
+    }
+  ],
   "quizzes": [
     {
       "id": 1,
@@ -10,13 +24,6 @@
           "type": "MCQ",
           "options": ["Library", "Framework", "Language"],
           "correctOption": "Library"
-        },
-        {
-          "id": 2,
-          "text": "React is maintained by?",
-          "type": "MCQ",
-          "options": ["Google", "Facebook", "Microsoft"],
-          "correctOption": "Facebook"
         }
       ]
     }
