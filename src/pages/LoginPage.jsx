@@ -15,7 +15,7 @@ const LoginPage = () => {
 
     try {
       const res = await fetch(
-        `https://your-json-server-url.onrender.com/users?username=${username}&password=${password}`
+        `https://quiz-management-system-react.onrender.com/users?username=${username}&password=${password}`
       );
       const data = await res.json();
 

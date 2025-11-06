@@ -57,10 +57,6 @@ const App = () => {
             />
           </Routes>
         </main>
-
-        <footer className="bg-gray-100 py-3 text-center text-sm text-gray-500 border-t">
-          © {new Date().getFullYear()} QuizApp
-        </footer>
       </div>
     </Router>
   );
