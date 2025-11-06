@@ -1,0 +1,25 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "React Basics",
+      "questions": [
+        {
+          "id": 1,
+          "text": "What is React?",
+          "type": "MCQ",
+          "options": ["Library", "Framework", "Language"],
+          "correctOption": "Library"
+        },
+        {
+          "id": 2,
+          "text": "React is maintained by?",
+          "type": "MCQ",
+          "options": ["Google", "Facebook", "Microsoft"],
+          "correctOption": "Facebook"
+        }
+      ]
+    }
+  ],
+  "submissions": []
+}
